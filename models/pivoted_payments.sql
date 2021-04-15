@@ -10,4 +10,4 @@ sum(case when payment_method = '{{payment_method}}' then amount  else 0 end) as 
 ,
 sum(amount) as total_amount
 from {{ ref('stg_payments') }}
-group by 1;
+group by 1
